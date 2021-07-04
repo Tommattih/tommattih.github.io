@@ -13,7 +13,7 @@ font-family: 'Open Sans', sans-serif;
 */
 
 /* ESTILOS GERAIS */
-html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, li, a, main{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -103,7 +103,7 @@ main .coluna section h2{
 main .coluna section h3{
     font-size: 1.1rem;
     color: var(--corExperiencia);
-    margin: 10px 0px 0px;
+    margin: 15px 0px 0px;
 }
 main .coluna section p{
     font-size: 1rem;
@@ -148,7 +148,6 @@ footer nav{
 }
 footer nav .redes-sociais li{
     margin: 15px 28px;
-    text-align: center;
     display: inline-block;
 }
 footer nav .redes-sociais li a{
@@ -164,24 +163,27 @@ footer nav .redes-sociais{
     flex-direction: row;
     flex-wrap: wrap;
 }
+
 footer nav .outras-redes {
     margin: 0px 20px;
-}***
+}
+
 footer nav .redes-sociais li a:hover img{
     transform: scale(1.2) translateY(-10px);
 }
+
 footer nav ul li a{
     font-size: 1rem;
-    color: var(--corTexto);
+    color: var(--corDoMeio);
 }
-footer nav .info-contato li{
-    padding: 5px;
-}
-footer nav .info-contato li a{
+
+footer nav .info-contato li a,
+footer nav .info-contato li p{
     font-size: 1rem;
     color: var(--corDoMeio);
     text-align: center;
 }
+
 footer nav .outras-redes{
     background-color: var(--corDoMeio);
     border-radius: 25px;
