@@ -19,7 +19,6 @@ font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    
 }
 
 :root{
@@ -38,45 +37,56 @@ font-family: 'Open Sans', sans-serif;
 .hidden {
     display: none;
 }
+
 /* BODY */
 body{
     font-family: 'Open Sans', sans-serif;
 }
+
 /* HEADER */
 header{
     background-color: var(--corDeCima);
     text-align: center;
     padding: 25px 25px 0 25px;
 }
+
 header .container{
     background-color: var(--folhaTopo);
 }
+
 header .linha{
     align-items: center;
 }
+
 header .coluna-esquerda{
     flex-basis: 30%;
 }
+
 header .coluna-direita{
     flex-basis: 70%;
 }
+
 header .coluna img{
     max-width: 100%;
 }
+
 header .coluna h1{
     font-size: 1.5rem;
     color: var(--corTitulo);
 }
+
 header .coluna p{
     font-size: 1rem;
     color: var(--corDeBaixo);
     margin: 5px 0px 0px;
 }
+
 header .coluna ul{
     margin: 15px 0 0;
     text-align: left;
     padding: 5px;
 }
+
 header .coluna ul li a{
     font-size: 1rem;
     color: var(--corTexto);
@@ -87,47 +97,58 @@ header .coluna ul li a{
 main{
     background-color: var(--corDoMeio);
 }
+
 main .container{
     background-color: var(--folhaMeio);
     padding-bottom: 30px;
 }
+
 main .coluna section {
     border-bottom: 2px solid var(--folhaTopo);
     margin: 0px 30px 0px;
     padding: 10px 5px;
 }
+
 main .coluna section h2{
     font-size: 1.25rem;
     color: var(--corTitulo);
 }
+
 main .coluna section h3{
     font-size: 1.1rem;
     color: var(--corExperiencia);
     margin: 15px 0px 0px;
 }
+
 main .coluna section p{
     font-size: 1rem;
     margin: 5px 0 0;
     line-height: 1.5;
 }
+
 main .coluna section p em{
     font-size: 0.9rem;
 }
+
 main .coluna section ul{
     margin: 12px 0 0;
 }
+
 main .coluna section ul li{
     font-size: 1rem;
     margin: 7px 0 1px 0;
 }
+
 main .coluna section ul li a{
     font-size: 1rem;
     color: #00000091;
     /*text-decoration: underline;*/
 }
+
 main .coluna section ul li strong{
     color: var(--corSubtitulo);
 }
+
 main .coluna section ul li p{
     font-size: 1rem;
     line-height: 1.5;
@@ -138,25 +159,32 @@ main .coluna section ul li p{
 footer{
     background-color: var(--corDeBaixo);
 }
+
 footer .container{
     background-color: var(--folhaFinal);
     text-align: -moz-center;
 }
+
 footer nav{
     text-align: -webkit-center;
     margin-bottom: 10px;
 }
+
 footer nav .redes-sociais li{
     margin: 15px 28px;
     display: inline-block;
 }
+
 footer nav .redes-sociais li a{
     color: var(--corDoMeio);
 }
-footer nav .redes-sociais li a img{
+
+footer nav .redes-sociais li a img,
+footer nav .outras-redes li a img{
     width: 40px;
     transition: .2s;
 }
+
 footer nav .redes-sociais{
     justify-content: space-evenly;
     display: flex;
@@ -168,8 +196,9 @@ footer nav .outras-redes {
     margin: 0px 20px;
 }
 
-footer nav .redes-sociais li a:hover img{
-    transform: scale(1.2) translateY(-10px);
+footer nav .redes-sociais li a:hover img,
+footer nav .outras-redes li a:hover img{
+    transform: scale(1.3) translateY(-10px);
 }
 
 footer nav ul li a{
@@ -183,27 +212,31 @@ footer nav .info-contato li p{
     color: var(--corDoMeio);
     text-align: center;
 }
-
-footer nav .outras-redes{
-    background-color: var(--corDoMeio);
-    border-radius: 25px;
-    border-bottom-style: ridge;
+footer nav .outras-redes {
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
-    padding: 10px;
+    padding: 5px 30px;
     max-width: 400px;
-    flex-wrap: nowrap;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
+
+footer nav .outras-redes li{
+    margin-bottom: 30px;
+}
+
 footer nav .outras-redes li a {
     font-size: 1rem;
-    color: var(--corDeBaixo);
-    text-align: center;
+    color: var(--corDoMeio);
 }
+
 footer nav .outras-redes li a img{
     max-width: 50px;
+    background-color: var(--corDoMeio);
+    border-radius: 8px;
 }
-footer nav .outras-redes li a img p {
+
+footer nav .outras-redes li a img p{
     justify-content: space-evenly;
 }
 
@@ -221,6 +254,7 @@ footer nav .outras-redes li a img p {
 header .container{
     position:relative
 }
+
 label{
     border: 3px solid #94a7b7;
     position:absolute;
@@ -233,6 +267,7 @@ label{
     box-sizing: content-box;
     cursor: pointer;
 }
+
 label span{
     background-color: #4e555e;
     height: 20px;
@@ -242,15 +277,18 @@ label span{
     transition: all ease .4s;
     /*margin-right: 15px;*/
 }
+
 .ativar-dark:checked ~ .dark-mode label{
     background-color: #4e555e;
 }
+
 .ativar-dark:checked ~ .dark-mode label span{
     background-color: #a0b2c8; /*fica melhor invertido com o da label acima*/
     /*margin-left: 15px;*/
     transform: translateX(15px);
     transition: all ease .4s
 }
+
 .ativar-dark:checked ~ .dark-mode{
     --corDeCima:#000000;
     --corDoMeio:#000000;
@@ -260,43 +298,49 @@ label span{
     --folhaTopo:#0e1224; 
     --corSubtitulo:#9a9a9a;
     --corTitulo:#dadada;
-    background-color: #000;
+    --background-color: #000;
+    --corLink: #606a77;
 }
+
 .ativar-dark:checked ~ .dark-mode header{
     color: var(--corTitulo);
 }
+
 .ativar-dark:checked ~ .dark-mode header .coluna ul li a {
     font-size: 1rem;
-    color: #606a77;
+    color: var(--corLink);
 }
-.ativar-dark:checked ~ .dark-mode header .coluna p{
-    color: var(--corExperiencia);
-}
+
 .ativar-dark:checked ~ .dark-mode main{
-    background-color: black;
+    background-color: var(--corExperiencia);
 }
+
 .ativar-dark:checked ~ .dark-mode main .coluna section {
     border-bottom: 2px solid #202b3a;
-    color: #637c96;
+    color: var(--corExperiencia);
 }
+
 .ativar-dark:checked ~ .dark-mode main .coluna section h2 {
     font-size: 1.25rem;
-    color: #0e1224;
+    color: var(--corTitulo);
 }
+
 .ativar-dark:checked ~ .dark-mode main .coluna section ul li strong {
-    color: #a0a0a0;
+    color: var(--corLink);
 }
+
 .ativar-dark:checked ~ .dark-mode footer{
-    --folhaFinal:#202b3a;
+    --folhaFinal:#202b3a; /*Não entendi ainda como q ta funcionando assim e com a variavel no bg, ou color, não*/
 }
-.ativar-dark:checked ~ .dark-mode footer nav ul li a{
-    color: var(--corTexto);
+
+.ativar-dark:checked ~ .dark-mode header .coluna p,
+.ativar-dark:checked ~ .dark-mode footer nav ul li a,
+.ativar-dark:checked ~ .dark-mode footer nav ul li p{
+    color: var(--corTitulo);
 }
-.ativar-dark:checked ~ .dark-mode footer nav .outras-redes{
-    --corDoMeio: #ffffff;
-}
-.ativar-dark:checked ~ .dark-mode footer nav ul li a {
-    color: var(--corExperiencia);
+
+.ativar-dark:checked ~ .dark-mode footer nav .outras-redes li a img{
+    background-color: var(--folhaFinal);
 }
 
 @keyframes aumentarLargura{
@@ -392,5 +436,12 @@ label span{
         margin-bottom: 10px;
         text-align: center;
         display: initial;
+    }
+    footer nav .outras-redes{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 30px;
+        max-width: 400px;
     }
 }
