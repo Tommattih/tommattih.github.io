@@ -68,5 +68,6 @@ https://github.com/Kenzie-Academy-Brasil/portfolio-start-sua-carreira
 -----------------------------------------
 
 Ajustes nas informações para mudança estrutural do critério de apresentação.
+Reestruturando e limpando detalhes.
 
 -----------------------------------------
