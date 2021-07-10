@@ -34,6 +34,7 @@ Nomeando blocos/div, criando classes e listando-os:
 
 Estilização de fonte
 *** font-family: 'Open Sans', sans-serif;
+*** font-family: 'Noto Sans', sans-serif;
 
 Tratamento de blocos maiores
 Tratamento de elementos e alinhamento
@@ -68,6 +69,9 @@ https://github.com/Kenzie-Academy-Brasil/portfolio-start-sua-carreira
 -----------------------------------------
 
 Ajustes nas informações para mudança estrutural do critério de apresentação.
-Reestruturando e limpando detalhes.
+
+-----------------------------------------
+
+Conclusão da primeira etapa do novo layout da página principal
 
 -----------------------------------------

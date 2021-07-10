@@ -417,14 +417,14 @@ label span{
     }
     main .coluna section .baixo-esquerda{
         bottom: -5px;
-        right: -5px;
+        right: 0;
         animation-name: aumentarLargura, aumentarAltura;
         animation-duration: 1.3s, 1.3s;
         animation-delay: 2s, 3s;
         animation-fill-mode: forwards;
         border-width: thick;
         border-bottom-color: #a0b2c8b7;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
         border-right-color: #a0b2c8b7;
             }
     footer{

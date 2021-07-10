@@ -1,3 +1,9 @@
+:root{
+    --text:#404C53;
+    --hover: #a65656;
+    --wshaddow: #fff
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -5,21 +11,17 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Noto Sans', sans-serif;
-    color: #404C53;
+    color: var(--text);
 }
 
-#bg img{
-    width: 100vw;
-    position: fixed;
-    z-index: 0;
-    opacity: 60%;
-    left: 0;
-    top: 0;
+body{
+    background-image: url(../img/bg.svg);
+    background-repeat: no-repeat;
+    background-size: inherit;
 }
 
+/* HEADER */
 header{
-    position: absolute;
-    z-index: 1;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -33,51 +35,66 @@ header #topo{
     text-align: justify;
 }
 
- /* talvez mudar a distribuição de atributos */
+header strong{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
 header nav{
-    align-self: flex-start;
     margin-top: 20px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
-main .designs{
-    margin-top: 400px;
-    max-width: 80vw;
-    position: absolute;
-    z-index: 4;
+header nav a img{
+    padding: 5px 15px;
+}
+
+header .click a{
+    padding: 0 0 2px;
     display: flex;
-    flex-direction:column;
-    /* flex-wrap: nowrap; */
+    color: var(--text);
+    transition: 0.6s;
+    flex-direction: column;
+}
+
+header .click ul a:hover{
+    font-weight: 700;
+
+    padding: 1px;
+    border-radius: .5em;
+    color: var(--hover);
+    box-shadow: 0 0 8px var(--hover);
+}
+
+/* MAIN */
+main .designs ul .flip{
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    padding-bottom: 25px;
 }
 
-main .designs div h2{
-    padding: 15px 0;
+main .designs ul li .flip h2{
+    display: flex;
+    align-items: center;
+    padding: 5px;
     margin: 0 auto;
-
 }
-main .designs div img{
+main .designs ul li .flip img{
     width: 60vw;
-    padding: 30px 0;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
-footer .container{
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.flip{
-    width:250px;
-    height: 500px;
-    float: left;
+/* FLIP */
+.flip{    
+    height: auto;
     perspective: 1500px;
 }
 
 .flip .frente{
+    padding: 30px 0;
+    margin-top: 10px;
     position: absolute;
     transform: rotateY(0deg);
     backface-visibility: hidden;
@@ -85,12 +102,10 @@ footer .container{
 }
 
 .flip .fundo{
-    position: absolute;
+    position: relative;
     transform: rotateY(180deg);
     backface-visibility: hidden;
-    transition: all .4s linear;
-    /* filter: grayscale(100%); 
-    -webkit-filter: grayscale(100%); */
+    transition: all .5s linear;
 }
 
 .flip:hover .frente{
@@ -102,14 +117,52 @@ footer .container{
     transform: rotateY(0deg);
     cursor: pointer;
 }
-strong{
-    font-weight: 700;
-    font-size: 2rem;
+
+/* FOOTER */
+footer{
+    background-image: url(../img/footer.svg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100vw;
 }
 
-ul li img {
-    border-radius: 8px 8px 8px 0;
+footer .container{
+    background-image: url(../img/logo-tom.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100vw;
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    padding: 0 30px;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: flex-start;
 }
+
+footer .container a{
+    padding: 0 15px 15px;
+    display: flex;
+    align-self: flex-end;
+    flex-direction: row;
+    align-items: center;
+    transition: .4s;
+}
+
+footer .container a:hover{
+    transform: scale(1.2) translateY(-10px);
+}
+
+footer .container img{
+    padding: 0 5px;
+    max-width: 35px;
+}
+
+
 /*  para o dark mode
-    color: white;
+color: white;
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
