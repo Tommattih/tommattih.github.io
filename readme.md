@@ -57,7 +57,7 @@ Bege claro - #F2E2CE
 Quase preto - #1A171B
 Vermelho sujo - #A65656
 Bege transparência - #F5F1EC
-Vermelho sujo claro - #AF7979
+Vermelho sujo transparência - #AF7979
 
 -----------------------------------------
 
@@ -68,10 +68,14 @@ https://github.com/Kenzie-Academy-Brasil/portfolio-start-sua-carreira
 
 -----------------------------------------
 
+**Updates**
+
 Ajustes nas informações para mudança estrutural do critério de apresentação.
-
------------------------------------------
-
+//
 Conclusão da primeira etapa do novo layout da página principal
+//
+Melhorias estéticas e botão de retorno para a página principal
+//
+Preparações para responsividade
 
 -----------------------------------------

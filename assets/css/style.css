@@ -43,7 +43,8 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-/* HEADER */
+
+/* * * * HEADER * * * */
 header{
     background-color: var(--corDeCima);
     text-align: center;
@@ -93,7 +94,7 @@ header .coluna ul li a{
 }
 
 
-/* PÁGINA INICIAL */
+/* * * * MAIN * * * */
 main{
     background-color: var(--corDoMeio);
 }
@@ -155,7 +156,8 @@ main .coluna section ul li p{
     margin-bottom: 0.3rem;
 }
 
-/* FOOTER */
+
+/* * * * FOOTER * * * */
 footer{
     background-color: var(--corDeBaixo);
 }
@@ -216,8 +218,8 @@ footer nav .outras-redes {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 5px 30px;
-    max-width: 400px;
+    padding: 0 10px;
+    margin: 14px;
     flex-wrap: wrap;
 }
 
@@ -241,7 +243,8 @@ footer nav .outras-redes li a img p{
 }
 
 
-/* EXTRAS */
+/* * * * EXTRAS * * * */
+/* * * * DARK-MODE * * * */
 .ativar-dark{
     width: 50px;
     height: 50px;
@@ -360,8 +363,8 @@ label span{
     }
 }
 
-/*/ @MEDIA */
 
+/* * * * @MEDIA * * * */
 @media only screen and (min-width:768px) {
     .linha {
         display: flex;
@@ -398,6 +401,10 @@ label span{
         padding: 10px;
         position: relative;
     }
+    .ativar-dark:checked ~ .dark-mode main .coluna section {
+        border-bottom: none;
+    }
+
     main .coluna section span{
         position: absolute;
         display: block;
@@ -415,6 +422,7 @@ label span{
         border-top-color: #a0b2c8b7;
         border-left-color: #a0b2c8;
     }
+
     main .coluna section .baixo-esquerda{
         bottom: -5px;
         right: 0;
@@ -426,22 +434,22 @@ label span{
         border-bottom-color: #a0b2c8b7;
         margin-bottom: 8px;
         border-right-color: #a0b2c8b7;
-            }
+    }
+
     footer{
         padding-bottom: 30px;
         
     }
+
     footer nav .redes-sociais li{
         margin: 0  14px;
         margin-bottom: 10px;
         text-align: center;
-        display: initial;
     }
+
     footer nav .outras-redes{
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding: 5px 30px;
-        max-width: 400px;
+        justify-content: space-evenly;
     }
 }

@@ -10,17 +10,21 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: 'Noto Sans', sans-serif;
     color: var(--text);
 }
 
+
+/* * * * BODY * * * */
 body{
     background-image: url(../img/bg.svg);
     background-repeat: no-repeat;
     background-size: inherit;
+    font-family: 'Noto Sans', sans-serif;
+    /* overflow-x: hidden; */
 }
 
-/* HEADER */
+
+/* * * * HEADER * * * */
 header{
     display: flex;
     align-items: center;
@@ -50,7 +54,7 @@ header nav a img{
     padding: 5px 15px;
 }
 
-header .click a{
+.click a{
     padding: 0 0 2px;
     display: flex;
     color: var(--text);
@@ -58,7 +62,8 @@ header .click a{
     flex-direction: column;
 }
 
-header .click ul a:hover{
+.click a:hover,
+.click a h2:hover{
     font-weight: 700;
 
     padding: 1px;
@@ -67,7 +72,8 @@ header .click ul a:hover{
     box-shadow: 0 0 8px var(--hover);
 }
 
-/* MAIN */
+
+/* * * * MAIN * * * */
 main .designs ul .flip{
     display: flex;
     flex-direction: column;
@@ -86,7 +92,8 @@ main .designs ul li .flip img{
     margin: 20px auto;
 }
 
-/* FLIP */
+
+/* * * * FLIP * * * */
 .flip{    
     height: auto;
     perspective: 1500px;
@@ -118,30 +125,25 @@ main .designs ul li .flip img{
     cursor: pointer;
 }
 
-/* FOOTER */
+
+/* * * * FOOTER * * * */
 footer{
-    background-image: url(../img/footer.svg);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
+    background: rgb(217, 159, 108);
+    background: linear-gradient(
+        0deg
+        , rgba(217,159,108,1) 0%, rgba(255,255,255,1) 50%);
     height: auto;
     width: 100vw;
 }
 
 footer .container{
-    background-image: url(../img/logo-tom.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
     width: 100vw;
-    height: 120px;
+    height: auto;
     display: flex;
-    align-items: flex-end;
-    flex-direction: row;
     padding: 0 30px;
     flex-wrap: wrap;
     align-content: flex-end;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 footer .container a{
@@ -157,12 +159,23 @@ footer .container a:hover{
     transform: scale(1.2) translateY(-10px);
 }
 
-footer .container img{
+footer .container a img{
     padding: 0 5px;
     max-width: 35px;
 }
 
+footer .container figure img{
+    padding: 0 5px;
+    width: 45vh;
+}
 
-/*  para o dark mode
-color: white;
+
+/* * * * @MEDIA * * * */
+/* @media only screen and (min-width:768px) {
+---
+} */
+
+/* * * * EXTRAS * * * */
+/* * * * DARK-MODE * * * */
+/*  color: white;
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
