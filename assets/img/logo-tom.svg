@@ -1,10 +1,10 @@
-<svg width="478" height="305" viewBox="0 0 478 305" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect x="163" width="315" height="315" fill="url(#pattern0)" fill-opacity="0.9"/>
-<path d="M103.876 136.713L104.124 169.959H123.601L124.229 176.87H144.334V184.409H158.157V191.32H165.068V237.813H159.413L158.157 260.432H151.245V273.626L95.3282 274.254V261.06L89.0454 259.803L88.797 246.609H82.7625V232.787H75.8514V218.965H68.9403V212.054H62.0292V198.232H75.8514V203.311H88.797V136.713H103.876Z" fill="white"/>
-<rect y="68" width="228.68" height="225" fill="url(#pattern1)"/>
+<svg width="478" height="226" viewBox="0 0 478 226" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="163" y="5" width="315" height="221" fill="url(#pattern0)" fill-opacity="0.9"/>
+<path d="M103.876 68.7131L104.124 101.959H123.601L124.229 108.87H144.334V116.409H158.157V123.32H165.068V169.813H159.413L158.157 192.432H151.245V205.626L95.3282 206.254V193.06L89.0454 191.803L88.797 178.609H82.7625V164.787H75.8514V150.965H68.9403V144.054H62.0292V130.232H75.8514V135.311H88.797V68.7131H103.876Z" fill="white"/>
+<rect width="228.68" height="225" fill="url(#pattern1)"/>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0" transform="translate(0 0.116858) scale(0.002)"/>
+<use xlink:href="#image0" transform="translate(0 -0.163754) scale(0.002 0.00285068)"/>
 </pattern>
 <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image1" transform="translate(0.0273916 0.0652248) scale(0.00176708)"/>

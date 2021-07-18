@@ -1,7 +1,8 @@
 :root{
     --text:#404C53;
     --hover: #a65656;
-    --wshaddow: #fff
+    --wshaddow: #fff;
+    --dark-shaddow: #aaa;
 }
 
 *{
@@ -20,7 +21,7 @@ body{
     background-repeat: no-repeat;
     background-size: inherit;
     font-family: 'Noto Sans', sans-serif;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 
@@ -29,14 +30,16 @@ header{
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
-    padding: 25px 25px;
+    flex-direction: column;
+    padding: 10px 10px;
 }
 
-header #topo{
+header .intro{
     padding: 0 15px;
     display: flex;
     flex-direction: column;
     text-align: justify;
+    font-size: 0.75rem;
 }
 
 header strong{
@@ -60,6 +63,7 @@ header nav a img{
     color: var(--text);
     transition: 0.6s;
     flex-direction: column;
+    font-size: .85rem;
 }
 
 .click a:hover,
@@ -74,23 +78,37 @@ header nav a img{
 
 
 /* * * * MAIN * * * */
-main .designs ul .flip{
+main .container ul .flip{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 25px;
 }
 
-main .designs ul li .flip h2{
+main .container ul li .flip h2{
     display: flex;
     align-items: center;
-    padding: 5px;
     margin: 0 auto;
+    font-size: 1.1rem;
 }
-main .designs ul li .flip img{
+main .container ul li .flip img{
     width: 60vw;
     margin: 20px auto;
 }
+
+main .container ul li .flip img {
+    width: 70vw;
+    margin: 20px auto;
+    box-shadow: 3px 2px 5px var(--dark-shaddow);
+}
+
+main .designs #logos img{
+    box-shadow: none;
+}
+
+/* main .designs #cards img{
+    width: 70vw;
+} */
 
 
 /* * * * FLIP * * * */
@@ -129,11 +147,9 @@ main .designs ul li .flip img{
 /* * * * FOOTER * * * */
 footer{
     background: rgb(217, 159, 108);
-    background: linear-gradient(
-        0deg
-        , rgba(217,159,108,1) 0%, rgba(255,255,255,1) 50%);
-    height: auto;
+    background: linear-gradient( 0deg, rgba(217,159,108,1) -35%, rgba(255,255,255,1) 35%);
     width: 100vw;
+    background-attachment: fixed;
 }
 
 footer .container{
@@ -141,18 +157,18 @@ footer .container{
     height: auto;
     display: flex;
     padding: 0 30px;
-    flex-wrap: wrap;
-    align-content: flex-end;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
 
 footer .container a{
-    padding: 0 15px 15px;
+    padding: 0 0px 10px;
     display: flex;
-    align-self: flex-end;
     flex-direction: row;
     align-items: center;
     transition: .4s;
+    font-size: .75rem
 }
 
 footer .container a:hover{
@@ -161,19 +177,96 @@ footer .container a:hover{
 
 footer .container a img{
     padding: 0 5px;
-    max-width: 35px;
+    max-width: 30px;
 }
 
 footer .container figure img{
     padding: 0 5px;
-    width: 45vh;
+    width: 35vw;
 }
 
 
 /* * * * @MEDIA * * * */
-/* @media only screen and (min-width:768px) {
----
-} */
+@media only screen and (min-width:798px) {
+    header{
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        padding: 15px 50px;
+    }
+
+    .click a {
+        font-size: 1rem;
+    }
+
+    header .intro {
+        padding: 0 30px;
+        margin: -35px 0 0;
+        font-size: 1rem;
+    }
+
+    header .intro strong {
+        font-size: 2rem;
+    }
+
+    main .container ul li .flip h2{
+        padding: 5px;
+        font-size: 1.5rem;
+    }
+
+    main .container ul li .flip img {
+        width: 50vw;
+        margin: 20px auto;
+        box-shadow: 3px 2px 5px silver;
+    }
+
+    main .designs{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: baseline;
+    }
+
+    main .designs #logos img{
+        width: 25vw;
+    }
+
+    main .designs #cards img{
+        width: 35vw;
+        margin: 50px;
+    }
+
+    footer{
+        background: linear-gradient(
+            0deg
+            , rgba(217,159,108,1) 0%, rgba(255,255,255,1) 50%);
+        height: auto;
+        width: 100vw;
+    }
+
+    footer .container{
+        flex-wrap: wrap;
+        align-content: flex-end;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    footer .container a{
+        align-self: flex-end;
+        flex-direction: row;
+        padding: 0 15px 15px;
+        font-size: 1rem;
+    }
+
+    footer .container a img{
+        max-width: 35px;
+    }
+
+    footer .container figure img{
+        padding: 0 5px;
+        width: 20vw;
+    }
+}
 
 /* * * * EXTRAS * * * */
 /* * * * DARK-MODE * * * */

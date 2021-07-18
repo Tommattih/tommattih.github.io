@@ -76,6 +76,7 @@ Conclusão da primeira etapa do novo layout da página principal
 //
 Melhorias estéticas e botão de retorno para a página principal
 //
-Preparações para responsividade
+Ajustes de responsividade realizados
+//
 
 -----------------------------------------
