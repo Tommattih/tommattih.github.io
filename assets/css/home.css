@@ -42,6 +42,10 @@ header .intro{
     font-size: 0.75rem;
 }
 
+header .intro p{
+    padding-bottom: .5rem;
+}
+
 header strong{
     font-weight: 700;
     font-size: 1.5rem;
@@ -58,18 +62,22 @@ header nav a img{
 }
 
 .click a{
-    padding: 0 0 2px;
     display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 0 3px var(--text);
+    border-radius: 7px;
+    margin: 5px 0;
+    padding: 0 0 2px;
+    
     color: var(--text);
     transition: 0.6s;
-    flex-direction: column;
     font-size: .85rem;
 }
 
 .click a:hover,
 .click a h2:hover{
     font-weight: 700;
-
     padding: 1px;
     border-radius: .5em;
     color: var(--hover);
@@ -106,10 +114,6 @@ main .designs #logos img{
     box-shadow: none;
 }
 
-/* main .designs #cards img{
-    width: 70vw;
-} */
-
 
 /* * * * FLIP * * * */
 .flip{    
@@ -145,25 +149,17 @@ main .designs #logos img{
 
 
 /* * * * FOOTER * * * */
-footer{
-    background: rgb(217, 159, 108);
-    background: linear-gradient( 0deg, rgba(217,159,108,1) -35%, rgba(255,255,255,1) 35%);
-    width: 100vw;
-    background-attachment: fixed;
-}
-
 footer .container{
-    width: 100vw;
-    height: auto;
+    background: rgb(217, 159, 108);
+    background: linear-gradient( 0deg, rgba(217,159,108,1) -30%, rgba(255,255,255,1) 100%);
     display: flex;
-    padding: 0 30px;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
 }
 
 footer .container a{
-    padding: 0 0px 10px;
+    padding: 0 0px 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -183,11 +179,14 @@ footer .container a img{
 footer .container figure img{
     padding: 0 5px;
     width: 35vw;
+    margin-top: -10px;
 }
 
 
 /* * * * @MEDIA * * * */
 @media only screen and (min-width:798px) {
+    
+    /* * * * HEADER * * * */
     header{
         display: flex;
         align-items: center;
@@ -198,11 +197,12 @@ footer .container figure img{
 
     .click a {
         font-size: 1rem;
+        padding: 0;
     }
 
     header .intro {
         padding: 0 30px;
-        margin: -35px 0 0;
+        margin: -15px 0 0;
         font-size: 1rem;
     }
 
@@ -210,6 +210,8 @@ footer .container figure img{
         font-size: 2rem;
     }
 
+
+        /* * * * MAIN * * * */
     main .container ul li .flip h2{
         padding: 5px;
         font-size: 1.5rem;
@@ -236,15 +238,11 @@ footer .container figure img{
         margin: 50px;
     }
 
-    footer{
-        background: linear-gradient(
-            0deg
-            , rgba(217,159,108,1) 0%, rgba(255,255,255,1) 50%);
-        height: auto;
-        width: 100vw;
-    }
 
+        /* * * * FOOTER * * * */
     footer .container{
+        background: linear-gradient( 0deg, rgba(217,159,108,1) 0%, rgba(255,255,255,1) 50%);
+        padding: 0 30px;
         flex-wrap: wrap;
         align-content: flex-end;
         justify-content: space-between;
