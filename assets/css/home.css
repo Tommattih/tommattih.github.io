@@ -17,6 +17,7 @@
 
 /* * * * BODY * * * */
 body{
+    /* clip-path: polygon(100% 20%, 53% 56%, 0 95%, 0 0, 100% 0); */
     background-image: url(../img/bg.svg);
     background-repeat: no-repeat;
     background-size: inherit;
@@ -197,11 +198,11 @@ footer .container figure img{
 
     .click a {
         font-size: 1rem;
-        padding: 0;
+        /* padding: 0; */
     }
 
     header .intro {
-        padding: 0 30px;
+        padding: 0 30px 0 75px; /* pra add o botão do dark*/
         margin: -15px 0 0;
         font-size: 1rem;
     }
