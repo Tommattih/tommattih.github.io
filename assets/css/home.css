@@ -214,7 +214,7 @@ footer .container figure img{
 
         /* * * * MAIN * * * */
     main .container ul li .flip h2{
-        padding: 5px;
+        padding: 0 16px;
         font-size: 1.5rem;
     }
 
