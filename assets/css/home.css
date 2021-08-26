@@ -52,10 +52,14 @@ header strong{
     font-size: 1.5rem;
 }
 
+header em{
+    font-weight: 600;
+    transition: 0.8s;
+}
+
 header nav{
-    margin-top: 20px;
+    margin: 20px 0;
     text-align: center;
-    font-size: 1rem;
 }
 
 header nav a img{
@@ -74,15 +78,6 @@ header nav a img{
     color: var(--text);
     transition: 0.6s;
     font-size: .85rem;
-}
-
-.click a:hover,
-.click a h2:hover{
-    font-weight: 700;
-    padding: 1px;
-    border-radius: .5em;
-    color: var(--hover);
-    box-shadow: 0 0 8px var(--hover);
 }
 
 
@@ -196,14 +191,30 @@ footer .container figure img{
         padding: 15px 50px;
     }
 
-    .click a {
-        font-size: 1rem;
-        /* padding: 0; */
+    header em:hover{
+        background-color: var(--wshaddow);
+        border-radius: .5em;
+        box-shadow: 0 2px 5px var(--wshaddow);
+        color: var(--hover)
     }
 
+    .click a {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    .click a:hover,
+    .click a h2:hover{
+        background-color: var(--wshaddow);
+        font-weight: 700;
+        padding: 1px;
+        border-radius: .5em;
+        color: var(--hover);
+        box-shadow: 0 0 8px var(--hover);
+    }
+    
     header .intro {
         padding: 0 30px 0 75px; /* pra add o botão do dark*/
-        margin: -15px 0 0;
         font-size: 1rem;
     }
 
@@ -214,7 +225,7 @@ footer .container figure img{
 
         /* * * * MAIN * * * */
     main .container ul li .flip h2{
-        padding: 0 16px;
+        padding: 5px;
         font-size: 1.5rem;
     }
 
