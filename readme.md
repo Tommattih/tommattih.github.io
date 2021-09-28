@@ -1,3 +1,4 @@
+///SITE///
 **HTML**
 
 Definindo estrutura:
@@ -48,7 +49,7 @@ Animando bordas e botões
 
 -----------------------------------------
 
-**Cores da ID**
+**Cores da ID /Site**
 
 Bege - #D99F6C
 Cinza - #525252
@@ -68,7 +69,7 @@ https://github.com/Kenzie-Academy-Brasil/portfolio-start-sua-carreira
 
 -----------------------------------------
 
-**Updates**
+**Updates All**
 
 Ajustes nas informações para mudança estrutural do critério de apresentação.
 //
@@ -78,5 +79,17 @@ Melhorias estéticas e botão de retorno para a página principal
 //
 Ajustes de responsividade realizados
 //
+Re-color: Dando vida pro visual
+-----------------------------------------
+
+///HOME///
+**Cores da Home**
+
+    Dark-blue - #162345;
+    Light-red - #a65656;
+    Blue - #0032eaa6;
+    White - #fff;
+    Gray - #aaa;
+    Light-blue - #bbc9ff;
 
 -----------------------------------------

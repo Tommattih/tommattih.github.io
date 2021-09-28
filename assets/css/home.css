@@ -1,8 +1,10 @@
 :root{
-    --text:#404C53;
+    --text:#162345;
     --hover: #a65656;
+    --hover2: #0032eaa6;
     --wshaddow: #fff;
     --dark-shaddow: #aaa;
+    --background-base:#bbc9ff;
 }
 
 *{
@@ -17,10 +19,8 @@
 
 /* * * * BODY * * * */
 body{
-    /* clip-path: polygon(100% 20%, 53% 56%, 0 95%, 0 0, 100% 0); */
-    background-image: url(../img/bg.svg);
-    background-repeat: no-repeat;
-    background-size: inherit;
+    background: var(--background-color);
+    background: linear-gradient(137deg, var(--background-color) 0%, var(--background-base) 50%);
     font-family: 'Noto Sans', sans-serif;
     overflow-x: hidden;
 }
@@ -28,6 +28,8 @@ body{
 
 /* * * * HEADER * * * */
 header{
+    background-color: var(--hover);
+    background: linear-gradient(200deg, var(--hover), var(--hover2));
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -35,53 +37,68 @@ header{
     padding: 10px 10px;
 }
 
-header .intro{
-    padding: 0 15px;
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    font-size: 0.75rem;
-}
-
-header .intro p{
-    padding-bottom: .5rem;
-}
-
-header strong{
-    font-weight: 700;
-    font-size: 1.5rem;
-}
-
-header em{
-    font-weight: 600;
-    transition: 0.8s;
-}
-
 header nav{
+    display: flex;
     margin: 20px 0;
     text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header nav figure img{
+    padding: 0 5px;
+    width: 80vw;
 }
 
 header nav a img{
-    padding: 5px 15px;
+    padding: .8em;
+    width: 8rem;
 }
 
-.click a{
+header .click a{
     display: flex;
     flex-direction: column;
-
-    box-shadow: 0 0 3px var(--text);
-    border-radius: 7px;
-    margin: 5px 0;
-    padding: 0 0 2px;
-    
+    box-shadow: 0 0 2px var(--text);
+    border-radius: 15px;
+    padding: .1em .8em;
+    margin: .3em 0.8em;
     color: var(--text);
-    transition: 0.6s;
-    font-size: .85rem;
+    font-size: .8rem;
+    width: 10em;
 }
 
 
 /* * * * MAIN * * * */
+main {
+    background: var(--background-base);
+    background: linear-gradient(
+        165deg, var(--hover2) 1%, var(--background-base) 25%);
+}
+
+main .intro{
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    font-size: 0.8rem;
+}
+
+main .intro p{
+    padding-bottom: .5rem;
+}
+
+main strong{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+main em{
+    font-weight: 600;
+    color: var(--text);
+    transition: 0.8s;
+}
+
 main .container ul .flip{
     display: flex;
     flex-direction: column;
@@ -89,12 +106,19 @@ main .container ul .flip{
     padding-bottom: 25px;
 }
 
-main .container ul li .flip h2{
+main .container ul li .flip h2,
+main .posters #banners h2{
     display: flex;
     align-items: center;
     margin: 0 auto;
-    font-size: 1.1rem;
+    padding: 0.3em;
+    
+    font-size: 1rem;
+
+    background: linear-gradient(175deg, var(--hover2), transparent);
+    border-radius: 20px;
 }
+
 main .container ul li .flip img{
     width: 60vw;
     margin: 20px auto;
@@ -108,6 +132,12 @@ main .container ul li .flip img {
 
 main .designs #logos img{
     box-shadow: none;
+}
+
+main .posters #banners h2{
+    margin-top: 1em;
+    justify-content: center;
+    max-width: 10em;
 }
 
 
@@ -146,12 +176,13 @@ main .designs #logos img{
 
 /* * * * FOOTER * * * */
 footer .container{
-    background: rgb(217, 159, 108);
-    background: linear-gradient( 0deg, rgba(217,159,108,1) -30%, rgba(255,255,255,1) 100%);
+    background: var(--background-base);
+    background: linear-gradient(0deg, var(--hover2) 5%, var(--background-base) 90%);
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    padding: 1em;
 }
 
 footer .container a{
@@ -160,11 +191,7 @@ footer .container a{
     flex-direction: row;
     align-items: center;
     transition: .4s;
-    font-size: .75rem
-}
-
-footer .container a:hover{
-    transform: scale(1.2) translateY(-10px);
+    font-size: .8rem
 }
 
 footer .container a img{
@@ -172,113 +199,126 @@ footer .container a img{
     max-width: 30px;
 }
 
-footer .container figure img{
-    padding: 0 5px;
-    width: 35vw;
-    margin-top: -10px;
+footer .container .github a img {
+    filter: invert(1);
 }
 
 
+/* * * * * * * * * * * */
 /* * * * @MEDIA * * * */
+/* * * * * * * * * * */
+
 @media only screen and (min-width:798px) {
     
     /* * * * HEADER * * * */
-    header{
+    header .topo .click{
         display: flex;
-        align-items: center;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        padding: 15px 50px;
-    }
-
-    header em:hover{
-        background-color: var(--wshaddow);
-        border-radius: .5em;
-        box-shadow: 0 2px 5px var(--wshaddow);
-        color: var(--hover)
-    }
-
-    .click a {
-        font-size: 1rem;
-        padding: 0;
-    }
-
-    .click a:hover,
-    .click a h2:hover{
-        background-color: var(--wshaddow);
-        font-weight: 700;
-        padding: 1px;
-        border-radius: .5em;
-        color: var(--hover);
-        box-shadow: 0 0 8px var(--hover);
+        align-items: flex-start;
     }
     
-    header .intro {
-        padding: 0 30px 0 75px; /* pra add o botão do dark*/
-        font-size: 1rem;
+    header .click a {
+        font-size: .9em;
+        transition: 0.6s;        
+    }
+    
+    header .click a:hover,
+    header .click a h2:hover{
+        background-color: var(--wshaddow);
+        font-weight: 700;
+        color: var(--hover);
+        box-shadow: 0 0 4px var(--hover);
+    }
+    
+    header nav figure img{
+        width: 25vw;
+    }
+    
+    
+    /* * * * MAIN * * * */
+    
+    main .intro {
+        font-size: .9rem;
     }
 
-    header .intro strong {
-        font-size: 2rem;
+    main .intro em:hover{
+        transform: scale(1.1) translateY(-8px);
     }
 
-
-        /* * * * MAIN * * * */
     main .container ul li .flip h2{
-        padding: 5px;
-        font-size: 1.5rem;
+        padding: 4px 16px;
+        font-size: 1.2rem;
     }
-
+    
     main .container ul li .flip img {
-        width: 50vw;
+        width: 45vw;
         margin: 20px auto;
         box-shadow: 3px 2px 5px silver;
     }
-
-    main .designs{
+    
+    main .designs ul{
         display: flex;
         justify-content: space-evenly;
         align-items: baseline;
     }
-
+    
     main .designs #logos img{
         width: 25vw;
     }
-
+    
     main .designs #cards img{
         width: 35vw;
         margin: 50px;
     }
+    
+    main .models ul,
+    main .posters #banners ul li{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    main #sites .flip .click h2{
+        transition: 1s;
+    }
+
+    main #sites h2:hover,
+    main em:hover{
+        background: linear-gradient(175deg, var(--hover), transparent);
+        font-weight: 700;
+    }
+
+    main .posters #banners img{
+        width: 30vw;
+    }
 
 
-        /* * * * FOOTER * * * */
+    .posters .flip .frente{
+        padding: 0;
+    }
+
+    /* * * * FOOTER * * * */
     footer .container{
-        background: linear-gradient( 0deg, rgba(217,159,108,1) 0%, rgba(255,255,255,1) 50%);
         padding: 0 30px;
         flex-wrap: wrap;
         align-content: flex-end;
         justify-content: space-between;
         flex-direction: row;
     }
-
+    
     footer .container a{
         align-self: flex-end;
         flex-direction: row;
         padding: 0 15px 15px;
-        font-size: 1rem;
+        font-size: .8rem;
+    }
+    
+    footer .container a:hover{
+        transform: scale(1.1) translateY(-4px);
     }
 
     footer .container a img{
         max-width: 35px;
     }
-
-    footer .container figure img{
-        padding: 0 5px;
-        width: 20vw;
-    }
 }
 
 /* * * * EXTRAS * * * */
 /* * * * DARK-MODE * * * */
-/*  color: white;
-    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
