@@ -1,4 +1,30 @@
-///SITE///
+
+**Updates All**
+
+Ajustes nas informações para mudança estrutural do critério de apresentação.
+
+Conclusão da primeira etapa do novo layout da página principal
+
+Melhorias estéticas e botão de retorno para a página principal
+
+Ajustes de responsividade realizados
+
+Re-color: Dando vida pro visual
+
+-----------------------------------------
+
+///(.index)///
+**Cores da Home**
+
+    Dark-blue - #162345;
+    Light-red - #a65656;
+    Blue - #0032eaa6;
+    White - #fff;
+    Gray - #aaa;
+    Light-blue - #bbc9ff;
+
+-----------------------------------------
+///(/site)///
 **HTML**
 
 Definindo estrutura:
@@ -66,30 +92,5 @@ Vermelho sujo transparência - #AF7979
 
 Semana Start sua carreira - Kenzie Academy
 https://github.com/Kenzie-Academy-Brasil/portfolio-start-sua-carreira
-
------------------------------------------
-
-**Updates All**
-
-Ajustes nas informações para mudança estrutural do critério de apresentação.
-//
-Conclusão da primeira etapa do novo layout da página principal
-//
-Melhorias estéticas e botão de retorno para a página principal
-//
-Ajustes de responsividade realizados
-//
-Re-color: Dando vida pro visual
------------------------------------------
-
-///HOME///
-**Cores da Home**
-
-    Dark-blue - #162345;
-    Light-red - #a65656;
-    Blue - #0032eaa6;
-    White - #fff;
-    Gray - #aaa;
-    Light-blue - #bbc9ff;
 
 -----------------------------------------
