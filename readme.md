@@ -13,7 +13,7 @@ Re-color: Dando vida pro visual
 
 -----------------------------------------
 
-///(.index)///
+/// **.index** ///
 **Cores da Home**
 
     Dark-blue - #162345;
@@ -24,7 +24,7 @@ Re-color: Dando vida pro visual
     Light-blue - #bbc9ff;
 
 -----------------------------------------
-///(/site)///
+/// **/site** ///
 **HTML**
 
 Definindo estrutura:
