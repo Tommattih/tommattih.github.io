@@ -1,4 +1,17 @@
 
+//HOME//
+
+**Cores da Home (.index)**
+
+    Dark-blue - #162345;
+    Light-red - #a65656;
+    Blue - #0032eaa6;
+    White - #fff;
+    Gray - #aaa;
+    Light-blue - #bbc9ff;
+
+-----------------------------------------
+
 **Updates All**
 
 Ajustes nas informações para mudança estrutural do critério de apresentação.
@@ -12,18 +25,14 @@ Ajustes de responsividade realizados
 Re-color: Dando vida pro visual
 
 -----------------------------------------
-//HOME//
 
-**Cores da Home (.index)**
+**Referência**
 
-    Dark-blue - #162345;
-    Light-red - #a65656;
-    Blue - #0032eaa6;
-    White - #fff;
-    Gray - #aaa;
-    Light-blue - #bbc9ff;
+Testes da combinação de ideias e aprendizados.
 
 -----------------------------------------
+-----------------------------------------
+
 // /site //
 
 
