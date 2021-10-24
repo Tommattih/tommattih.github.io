@@ -12,6 +12,7 @@ Ajustes de responsividade realizados
 Re-color: Dando vida pro visual
 
 -----------------------------------------
+//HOME//
 
 **Cores da Home (.index)**
 
@@ -23,7 +24,9 @@ Re-color: Dando vida pro visual
     Light-blue - #bbc9ff;
 
 -----------------------------------------
-/// **/site** ///
+// /site //
+
+
 **HTML**
 
 Definindo estrutura:
