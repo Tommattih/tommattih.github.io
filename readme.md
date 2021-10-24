@@ -13,8 +13,7 @@ Re-color: Dando vida pro visual
 
 -----------------------------------------
 
-/// **.index** ///
-**Cores da Home**
+**Cores da Home (.index)**
 
     Dark-blue - #162345;
     Light-red - #a65656;
@@ -75,16 +74,16 @@ Animando bordas e botões
 
 -----------------------------------------
 
-**Cores da ID /Site**
+**Cores da ID (/Site)**
 
-Bege - #D99F6C
-Cinza - #525252
-Azul dark - #2B3840
-Bege claro - #F2E2CE
-Quase preto - #1A171B
-Vermelho sujo - #A65656
-Bege transparência - #F5F1EC
-Vermelho sujo transparência - #AF7979
+    Bege - #D99F6C;
+    Cinza - #525252;
+    Azul dark - #2B3840;
+    Bege claro - #F2E2CE;
+    Quase preto - #1A171B;
+    Vermelho sujo - #A65656;
+    Bege transparência - #F5F1EC;
+    Vermelho sujo transparência - #AF7979;
 
 -----------------------------------------
 
