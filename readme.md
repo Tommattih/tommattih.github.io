@@ -31,16 +31,31 @@ Testes e combinações de aprendizado.
 
 ### CURRICULUM VITAE -> [tommattih.github.io/cv](https://tommattih.github.io/cv)
 
-**Cores do CV**
+**Cores Light Mode**
 
-    Bege - #D99F6C;
-    Cinza - #525252;
-    Azul dark - #2B3840;
-    Bege claro - #F2E2CE;
-    Quase preto - #1A171B;
-    Vermelho sujo - #A65656;
-    Bege transparência - #F5F1EC;
-    Vermelho sujo transparência - #AF7979;
+    Background topo - #D99F6C;
+    Folha Topo - #dbc3a4;
+    Background meio - #ffffff;
+    Folha Meio - #f5f1ec;
+    Background baixo - #a65656;
+    Folha Baixo - #af7979;
+    corTitulo - #1a171b;
+    corExperiencia - #2B3840;
+    corSubtitulo - #525252;
+    corTexto - #000000;
+    
+**Cores Dark Mode**
+    
+     Background topo - #000;
+     Folha Topo - #000;
+     Background meio - #000;
+     Folha Meio - #182230;
+     Background baixo - #8da2b9;
+     Folha Baixo - #0e1224; 
+     corTitulo - #9a9a9a;
+     corExperiencia - #dadada;
+     corSubtitulo - #000;
+     corTexto - #cbcbcb;
 
 **HTML**
 
