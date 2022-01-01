@@ -1,35 +1,44 @@
 :root{
-    --text:#162345;
-    --hover: #009688;
-    --hover2: #0032eaa6;
-    --wshaddow: #fff;
-    --dark-shaddow: #aaa;
-    --background-base:#bbc9ff;
+    --text:#e2f3ec;
+    --main-color: #009688;
+    --main-color-complement: #0032eaa6;
+    --hover-complement: #00bcd4;
+    --light-shaddow: #fff;
+    --dark-shaddow: rgba(0, 0, 0, .2); 
+    --background-dark: #030b0e;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
+    list-style-type: none;
     text-decoration: none;
     color: var(--text);
 }
 
 
 /* * * * BODY * * * */
+.content{
+    display: none;
+}
+
 body{
-    background: var(--background-color);
-    background: linear-gradient(137deg, var(--background-color) 0%, var(--background-base) 50%);
+    background-color: var(--main-color);
+    background: linear-gradient(75deg, var(--main-color), var(--main-color-complement));
     font-family: 'Noto Sans', sans-serif;
     overflow-x: hidden;
+}
+
+header,
+footer .container{
+    background-color: var(--main-color);
+    background: linear-gradient(200deg, var(--main-color), var(--main-color-complement));
 }
 
 
 /* * * * HEADER * * * */
 header{
-    background-color: var(--hover);
-    background: linear-gradient(200deg, var(--hover), var(--hover2));
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -37,7 +46,7 @@ header{
     padding: 10px 10px;
 }
 
-header nav{
+header #topo{
     display: flex;
     margin: 20px 0;
     text-align: center;
@@ -46,279 +55,186 @@ header nav{
     align-items: center;
 }
 
-header nav figure img{
-    padding: 0 5px;
+header #topo figure img{
+    /* padding: 0 5px; */
     width: 80vw;
 }
 
-header nav a img{
+header #topo a img{
     padding: .8em;
     width: 8rem;
 }
 
-header .click a{
+header .click-menu ul li a{
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 2px var(--text);
-    border-radius: 15px;
-    padding: .1em .8em;
-    margin: .3em 0.8em;
+    box-shadow: 0 0 .3rem var(--text);
+    border-radius: 1rem;
+    padding: .2rem .8rem;
+    margin: .5rem 0;
     color: var(--text);
-    font-size: .8rem;
-    width: 10em;
+    font-size: 1rem;
+    width: 12rem;
+}
+
+/* * * * DROPDOWN * * * */
+.drop ul li{
+    display: block;
+    position: relative;
+}
+
+/* sub-drop*/
+.drop ul ul{
+    display: none;
+    position: absolute;
 }
 
 
 /* * * * MAIN * * * */
-main {
-    background: var(--background-base);
-    background: linear-gradient(
-        165deg, var(--hover2) 1%, var(--background-base) 25%);
-}
-
 main .intro{
-    padding: 1em 2em;
+    padding: 1em;
     display: flex;
     flex-direction: column;
     text-align: justify;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 main .intro p{
-    padding-bottom: .5rem;
+    padding-bottom: 1rem;
 }
 
-main strong{
-    font-weight: 700;
-    font-size: 1.5rem;
+main span{
+    font-weight: normal;
+    font-size: 2rem;
 }
 
-main em{
-    font-weight: 600;
-    color: var(--text);
-    transition: 0.8s;
-}
-
-main .container ul .flip{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 25px;
-}
-
-main .container ul li .flip h2,
-main .posters #banners h2{
+section h2{
     display: flex;
     align-items: center;
-    margin: 0 auto;
-    padding: 0.3em;
-    
+    justify-content: center;
+    margin: 1.5rem 1rem 0rem;
+    padding: 0.2rem 1rem;
+    font-size: 1.1rem;
+    background: linear-gradient(175deg, var(--main-color-complement), var(--hover-complement));
+    border: solid .16rem var(--text);
+    border-radius: .8rem;
+    box-shadow: 0.4rem 0.4rem 0.6rem rgb(0 0 0 / 20%);
+
+}
+
+article h3{
+    display: flex;
+    justify-content: center;
+    margin: .5rem auto;
     font-size: 1rem;
-
-    background: linear-gradient(175deg, var(--hover2), transparent);
-    border-radius: 20px;
 }
 
-main .container ul li .flip img{
-    width: 60vw;
-    margin: 20px auto;
+#logos .shine {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-main .container ul li .flip img {
-    width: 70vw;
-    margin: 20px auto;
-    box-shadow: 3px 2px 5px var(--dark-shaddow);
-}
-
-main .designs #logos img{
+#logos img{
+    width: 75vw;
     box-shadow: none;
 }
 
-main .posters #banners h2{
-    margin-top: 1em;
-    justify-content: center;
-    max-width: 10em;
+#pages img,
+#cvs img{
+    width: 90vw;
+    display: flex;
+    margin: 0 auto 1rem;
+    box-shadow: 0.4rem 0.4rem 0.6rem rgb(0 0 0 / 20%);
 }
 
-
-/* * * * FLIP * * * */
-.flip{    
-    height: auto;
-    perspective: 1500px;
+#nlw-heat img{
+    box-shadow: 0.4rem 0.4rem 0.6rem rgb(0 0 0 / 20%);
+    border: solid 0.15rem var(--light-shaddow);
+    border-radius: 0.3rem;
 }
 
-.flip .frente{
-    padding: 30px 0;
-    margin-top: 10px;
-    position: absolute;
-    transform: rotateY(0deg);
-    backface-visibility: hidden;
-    transition: all .5s linear;
+#button-top{
+    padding: 0.5rem 0;
+    right: 1rem;
 }
 
-.flip .fundo{
-    position: relative;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
-    transition: all .5s linear;
+#button-top a{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0.5rem;
 }
 
-.flip:hover .frente{
-    transform: rotateY(-180deg);
-    cursor: pointer;
+#button-top img{
+    width: 1.5rem;
 }
-
-.flip:hover .fundo{
-    transform: rotateY(0deg);
-    cursor: pointer;
-}
-
 
 /* * * * FOOTER * * * */
 footer .container{
-    background: var(--background-base);
-    background: linear-gradient(0deg, var(--hover2) 5%, var(--background-base) 90%);
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    padding: 1em;
+    gap: .5rem;
+    padding: 1rem;
+}
+
+footer #about{
+    text-align: justify;
+    padding: 0 1rem;
+}
+
+#perfil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#perfil img{
+    width: 30vw;
+    border-radius: 100%;
+    box-shadow: 0.4rem 0.4rem 0.6rem rgb(0 0 0 / 20%);
 }
 
 footer .container a{
-    padding: 0 0px 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    transition: .4s;
-    font-size: .8rem
+    justify-content: center;
+    /*transition: .4s;  desktop*/
+    font-size: 1rem;
+    padding: 0 0px 5px;
 }
 
 footer .container a img{
-    padding: 0 5px;
-    max-width: 30px;
+    padding: 0 .4rem;
+    width: 2.4rem;
 }
 
-footer .container .github a img {
-    filter: invert(1);
+.github{
+    margin-top: 1rem;
 }
 
-
-/* * * * * * * * * * * */
-/* * * * @MEDIA * * * */
-/* * * * * * * * * * */
-
-@media only screen and (min-width:798px) {
-    
-    /* * * * HEADER * * * */
-    header .topo .click{
-        display: flex;
-        align-items: flex-start;
-    }
-    
-    header .click a {
-        font-size: .9em;
-        transition: 0.6s;        
-    }
-    
-    header .click a:hover,
-    header .click a h2:hover{
-        background-color: var(--wshaddow);
-        font-weight: 700;
-        color: var(--hover);
-        box-shadow: 0 0 4px var(--hover);
-    }
-    
-    header nav figure img{
-        width: 25vw;
-    }
-    
-    
-    /* * * * MAIN * * * */
-    
-    main .intro {
-        font-size: .9rem;
-    }
-
-    main .intro em:hover{
-        transform: scale(1.1) translateY(-8px);
-    }
-
-    main .container ul li .flip h2{
-        padding: 4px 16px;
-        font-size: 1.2rem;
-    }
-    
-    main .container ul li .flip img {
-        width: 45vw;
-        margin: 20px auto;
-        box-shadow: 3px 2px 5px silver;
-    }
-    
-    main .designs ul{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: baseline;
-    }
-    
-    main .designs #logos img{
-        width: 25vw;
-    }
-    
-    main .designs #cards img{
-        width: 35vw;
-        margin: 50px;
-    }
-    
-    main .models ul,
-    main .posters #banners ul li{
-        display: flex;
-        justify-content: space-evenly;
-    }
-    
-    main #sites .flip .click h2{
-        transition: 1s;
-    }
-
-    main #sites h2:hover,
-    main em:hover{
-        background: linear-gradient(175deg, var(--hover), transparent);
-        font-weight: 700;
-    }
-
-    main .posters #banners img{
-        width: 30vw;
-    }
-
-
-    .posters .flip .frente{
-        padding: 0;
-    }
-
-    /* * * * FOOTER * * * */
-    footer .container{
-        padding: 0 30px;
-        flex-wrap: wrap;
-        align-content: flex-end;
-        justify-content: space-between;
-        flex-direction: row;
-    }
-    
-    footer .container a{
-        align-self: flex-end;
-        flex-direction: row;
-        padding: 0 15px 15px;
-        font-size: .8rem;
-    }
-    
-    footer .container a:hover{
-        transform: scale(1.1) translateY(-4px);
-    }
-
-    footer .container a img{
-        max-width: 35px;
-    }
+.mail{
+    margin-bottom: 1rem;
 }
 
-/* * * * EXTRAS * * * */
-/* * * * DARK-MODE * * * */
+footer #donate a{
+    justify-content: center;
+}
+
+footer #donate img {
+    width: 10rem;
+    padding: inherit;
+    background: var(--light-shaddow);
+    border: solid var(--hover-complement) 0.25rem;
+    border-radius: 1rem;
+}
+
+figcaption {
+    text-align: center;
+    font-size: .9rem;
+}

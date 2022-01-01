@@ -4,235 +4,297 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tom Lins - Home</title>
+    <title>Tom Lins P.O</title>
 
-    <!-- Icone da aba -->
-    <link rel="shortcut icon" href="./assets/img/icon-solid-bg.svg" type="image/x-icon">
+    <!-- ICONE DA ABA -->
+    <link rel="shortcut icon" href="./assets/img/tommattih-icon.png" type="image/x-icon">
 
-    <!-- Fontes -->
+    <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/transitions.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
+
+    <!-- JAVASCRIPT -->
+    <script src="./assets/script.js" defer></script>
     
 </head>
-<body>
+<body onload="loading();">
+    <div class="preload">
+        <div class="preload-animation"></div>
+    </div>
+    <div class="content">
 
-    <header>
-        
-        <nav id="topo">
-            <figure>
-                <img src="/assets/img/logo-tom.svg" alt="Logo Tom Lins">
-            </figure>
-            
-            <div class="click">
-                <ul>
-                    <li>
-                        <a href="#logos">Logos</a>
-                    </li>
-                    
-                    <li>
-                        <a href="#cards">Cartões</a>
-                    </li>
-                    
-                    <li>
-                        <a href="#cvs">Currículo</a>
-                    </li>
-                    
-                    <li>
-                        <a href="#sites">Páginas</a>
-                    </li>
-                    
-                    <li>
-                        <a href="#banners">Banners</a>
-                    </li>
-                </ul>
+        <header>
+            <div id="topo">
+                <figure>
+                    <img src="/assets/img/tom-logo-cian.png" alt="Logo com o desenho de uma mão com óculos e roto sorrindo colocando uma mancha de tinta com o texto Tom Lins ao lado">
+                </figure>
+                
+                <nav class="click-menu drop">
+                    <ul>
+                        <li>
+                            <a href="#designs" alt="Botão de navegação para a seção designs">Designs</a>
+                            <ul>
+                                <li><a href="#logos">Logos</a></li>
+                                
+                                <li><a href="#cards">Cartões</a></li>
+                                
+                                <li><a href="#banners">Banners</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <a href="#pages" alt="Botão de navegação para a seção páginas">Pages</a>
+                            <ul>
+                                <li><a href="#pvsn">Portal PVSN</a></li>
+
+                                <li><a href="#placar">Placar</a></li>
+
+                                <li><a href="#nlw-heat">NLW Heat</a></li>
+
+                                <li><a href="#cv-online">CV Online</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#cvs" alt="Botão de navegação para a seção currículos">Currículos</a>
+                            <ul>
+                                <li><a href="#cv-online">CV Online</a></li>
+                                
+                                <li><a href="#cv-pdf">CV em PDF</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#info" alt="Botão de navegação para a seção informações do desenvolvedor">Sobre o Dev</a>
+                            <ul>
+                                <li><a href="#about">Sobre mim</a></li>
+                                
+                                <li><a href="#contact">Contatos</a></li>
+                                
+                                <li><a href="#donate">Apoie-me</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                
             </div>
-
-            <a href="https://wa.me/qr/3MJV6HAAJ4DGK1" target="_blank">
-                    <img src="./assets/img/QRcode.svg" alt="QR-code">
-            </a>
             
-        </nav>
+        </header>
         
-    </header>
-    
-    <main>
-            
+        <main>
+                
             <div class="container">
 
                 <article>
                     <div class="intro">
-                        <p><strong>A</strong>s tecnologias evoluem constantemente, e em uma velocidade extraordinária, apenas os meios físicos já não dão mais conta de suprir as necessidades da vida moderna, onde tudo está integrado a internet e ao alcance de poucos cliques ou toques no smartphone.</p>
-                        <p>Como um estudante das tecnologias de design e desenvolvimento, trago em forma de portifólio meus aprendizados e descobertas, aplicados a minha própria identidade visual e alguns outros <a href="https://tommattih.github.io/portal-25-pvsn/" target="_blank" placeholder="Página do projeto PVSN em construção" alt="Página do projeto PVSN"><abbr title="Página do projeto PVSN"><em>protótipos</em></abbr></a> e <a href="https://tommattih.github.io/NLW_Heat_Origin/" target="_blank" placeholder="Página do Crachá para o evento DoWhile 2021" alt="Página do Crachá feito para o evento DoWhile 2021"><abbr title="Crachá feito na NLW Heat (Origin)"><em>projetos</em></abbr></a>. Sempre buscando destacar as forças da marca e da personalidade a ser representada.</p>
-                        <p>Com isso em mente, voltei meu foco em direção ao futuro, onde a meta é trazer o seu negócio para o mundo digital, aumentando o seu alcance.</p>
+                        <p><span>A</span>s tecnologias estão em constante evolução, e isso ocorre em uma velocidade extraordinária. Apenas os meios analógicos já não dão mais conta de suprir as necessidades da vida moderna, onde tudo está integrado a internet e ao alcance de poucos cliques ou toques.</p>
+                        <p>Como um estudante das tecnologias de design e desenvolvimento, trago em forma de portifólio orgânico meus aprendizados e descobertas, aplicados a minha própria identidade visual e alguns outros projetos. Sempre buscando destacar as forças da marca e da personalidade a serem representadas.</p>
+                        <p>Com isso em mente, voltei meu foco em direção ao futuro, buscando aperfeiçoar as minhas habilidades com a meta de construir soluções inteligentes para trazer o seu negócio para o mundo digital, aumentando assim o seu alcance.</p>
                     </div>
                 </article>
                 
-                <article>
+                <section id="designs">
+                    <h2>Designs</h2>
                     <div class="designs">
-                        <ul>
-                            <li>
-                                <section id="logos">
-                                    
-                                    <div class="flip">
-                                        <h2>Logos</h2>
-                                        <div class="fundo">
-                                            <img src="./assets/img/veruska-logo.svg" alt="Veruska logo">
-                                        </div>
-                                        
-                                        <div class="frente">
-                                            <img src="./assets/img/logo.svg" alt="Tom Lins logo">
-                                        </div>
-                
-                                    </div>
-                
-                                </section>
-                            </li>
+                        <article id="logos">
+                            <h3>Logos</h3>
+                            <div class="flip shine">
+                                <img src="./assets/img/designs/veruska-logo-medal.png" alt="Veruska logo com duas pimentas, dois pastéis e uma borda circular dourada">
+                                <img src="./assets/img/designs/tommattih-logo-medal.png" alt="Tommattih logo em formato de tomate, com óculos e cavanhaque">
+                                <img src="./assets/img/designs/tom-logo-medal.png" alt="Tom Lins logo com um desenho de um cursor de mão com óculos e rosto sorridente, apontando para uma mancha de tinta com Tom Lins escrito ao lado">
+                            </div>
+                        </article>
 
-                            <li>
-                                <section id="cards">
-                                    
-                                    <div class="flip">
-                                        <h2>Cartões de visita</h2>
-                                        <div class="fundo">
-                                            <img src="./assets/img/card-verse.svg" alt="cartão verso">
-                                        </div>
-                                        
-                                        <div class="frente">
-                                            <img src="./assets/img/card-front.svg" alt="cartão frente">
-                                        </div>
-                                    </div>
-                                    
-                                </section>
-                            </li>
-                        </ul>
-                    </div>
+                        <article id="cards">
+                            <h3>Cartões de visita</h3>
+                            <div class="flip">
+                                <div class="fundo">
+                                    <img src="./assets/img/designs/card-tom-verse.png" alt="cartão de visitas verso">
+                                </div>
+                                
+                                <div class="frente">
+                                    <img src="./assets/img/designs/card-tom-front.png" alt="cartão de visitas frente">
+                                </div>
+                            </div>
+                        </article>
 
-                    <div class="models">
-                        <ul>
-                            <li>
-                                <section id="cvs">                    
-                                    
-                                    <div class="flip">
-                                        <h2>Currículo em PDF</h2>
-                                        <div class="fundo">
-                                            <img src="./assets/img/cv-en.svg" alt="currículo-en">
-                                        </div>
-                                        
-                                        <div class="frente">
-                                            <img src="./assets/img/cv-pt.svg" alt="currículo-pt">
-                                        </div>
-                                    </div>
-                                    
-                                </section>
-                            </li>
+                            <article id="banners" class="banners">
+                                <h3>Banners</h3>
+                                <div class="carrosel">
+                                    <ul>
+                                        <li>
+                                            <img src="./assets/img/designs/caldo-de-feijao.png" alt="Banner anunciando caldo de feijão no bar da Veruska">
+                                        </li>
                             
-                            <li>
-                                <section id="sites">
-                                    
-                                    <div class="flip">
-                                        <div class="click">
-                                            <a href="https://tommattih.github.io/cv">
-                                                <h2>Currículo virtual</h2>
-                                            </a>
-                                        </div>
-                                        
-                                        <div class="fundo">
-                                            <img src="./assets/img/site-dark.svg" alt="site-dark">
-                                        </div>
-                                        
-                                        <div class="frente">
-                                            <img src="./assets/img/site.svg" alt="site-normal">
-                                        </div>
-                                    </div>
-                                    
-                                </section> 
-                            </li>
-                        </ul>
+                                        <li>
+                                            <img src="./assets/img/designs/sabor-de-infancia.png" alt="Banner anunciando sabor de infancia (macarrão com molho) no bar da Veruska">
+                                        </li>
+                            
+                                        <li>
+                                            <img src="./assets/img/designs/costela-com-mandioca.png" alt="Banner anunciando costela com mandioca no bar da Veruska">
+                                        </li>
+                            
+                                        <li>
+                                            <img src="./assets/img/designs/pe-de-frango.png" alt="Banner anunciando pé de frango cozido com cuscuz no bar da Veruska">
+                                        </li>
+                            
+                                        <li>
+                                            <img src="./assets/img/designs/caldo-de-mocoto.png" alt="Banner anunciando caldo de mocotó no bar da Veruska">
+                                        </li>
+                            
+                                        <li>
+                                            <img src="./assets/img/designs/tom-services.png" alt="Banner anunciando serviços de web designer e developer Tom Lins">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>        
                     </div>
+                </section>
 
-                    <div class="posters">
-                        <section id="banners">
-                            <h2>Banners</h2>
-                            <ul>
-                                <li>
+                <section id="pages">
+                    <h2>Pages</h2>
+                    <article id="pvsn">
+                        <h3>Portal PVSN</h3>
+                        <div class="scroll">                            
+                            <a href="https://tommattih.github.io/portal-25-pvsn/" target="_blank">
+                                <abbr title="Portal de informações e interações para os moradores do Parque Vitoria do Sol Nascente"></abbr>
+                                <img src="./assets/img/pages/portal-25-pvsn.png" alt="Previsualização da página do Portal PVSN">
+                            </a>
+                        </div>
+                    </article>
                                     
-                                    <div class="flip">
-                                        <div class="fundo">
-                                            <img src="./assets/img/macarrao.svg" alt="Banner-Veruska">
-                                        </div>
-                                        
-                                        <div class="frente">
-                                            <img src="./assets/img/banner-veruska.svg" alt="Banner-Tom">
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="flip">
-                                        <div class="fundo">
-                                            <img src="./assets/img/mocoto.svg" alt="Banner-Veruska">
-                                        </div>
-                                        
-                                        <div class="frente">
-                                            <img src="./assets/img/feijao.svg" alt="Banner-Tom">
-                                        </div>
-                                    </div>
+                    <article id="placar">
+                        <h3>Placar de volei de praia</h3>
+                        <div class="fade">
+                            <a href="https://tommattih.github.io/placar-de-volei/">
+                                <abbr title="Placar interativo para marcar a pontuação de uma partida de volei de praia">
+                                    <img src="./assets/img/pages/placar-de-volei-dir.png" alt="Previsualização da página do projeto Placar de volei interativo, marcando a pontuação de uma partida de volei de praia, direita pontuando">
+                                    <img src="./assets/img/pages/placar-de-volei-esq.png" alt="Previsualização da página do projeto Placar de volei interativo, marcando a pontuação de uma partida de volei de praia, esquerda pontuando" id="fade"></abbr>
+                            </a>
+                        </div>
+                    </article>
 
-                                    <div class="flip">
-                                        <div class="fundo">
-                                            <img src="./assets/img/banner.svg" alt="Banner-Veruska">
-                                        </div>
-                                        
-                                        <div class="frente">
-                                            <img src="./assets/img/costela.svg" alt="Banner-Tom">
-                                        </div>
-                                    </div>
-                                </li>
-                            <ul>
-                        </section>        
-                    </div>
-                </article>
+                    <article id="nlw-heat">
+                        <h3>NLW Heat Crachá</h3>
+                        <a href="https://tommattih.github.io/NLW_Heat_Origin/" target="_blank">
+                            <abbr title="Crachá feito na NLW Heat (Origin) para o evento DoWhile 2021"></abbr>
+                            <img src="./assets/img/pages/NLW_Heat_Origin.png" alt="Previsualização da página do Crachá da NLW Heat">
+                        </a>
+                    </article>
+                </section>    
 
-            </div>
+                <section id="cvs">                    
+                    <h2>Currículos</h2>
+                    <article id="cv-online">
+                        <h3>Currículo virtual</h3>
+                        <div class="flip">
+                            <a href="https://tommattih.github.io/cv">
+                                <abbr title="Visualizar em nova guia">
+                                <img src="./assets/img/designs/cv-dark.png" alt="currículo virtual em dark-mode" class="fundo">
+                                <img src="./assets/img/designs/cv-light.png" alt="currúculo virtual light-mode" class="frente"></abbr>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article id="cv-pdf">
+                        <div class="flip">
+                            <h3>Currículo em PDF</h3>
+                            <h3>
+                                <a href="https://drive.google.com/file/d/1IBnHvqjoIwVh-f0ybrh63iap9CZnNC3e/view?usp=sharing" alt="link para visualizar em PDF"><abbr title="Clique para visualizar">PT &larr; </abbr></a>
+                                <a href="https://drive.google.com/file/d/1zsub7OfLZZOSNkyl4GYD2mX6kcYtfwWo/view?usp=sharing" alt="link to view PDF"><abbr title="Clique para visualizar"> &rarr; EN</abbr></a>
+                            </h3>                        
+                            <img src="./assets/img/designs/cv-en.png" alt="curriculum in english" class="fundo">
+                                
+                            <img src="./assets/img/designs/cv-pt.png" alt="currículo em Pt-Br" class="frente">
+                        </div>
+                    </article>
+                </section> 
                 
-                
-        </main>
+                <!-- button com position absolute, relativo ao main ou ao body .. -->
+                <div id="button-top">
+                    <a href="#topo" class="button">
+                    <img src="./assets/img/top-button-white.png" alt="Botão para o topo da página">Topo</a>
+                </div>
+            </div> <!-- fecha main container -->
             
+        </main>
+                
         <footer>            
             <div class="container">
-                
-                <li>
-                    <a href="mailto:tommattih@gmail.com">
-                        <img src="./assets/img/mail.svg" alt="Gmail logo" placeholder="Endereço de email">
-                        tommattih@gmail.com
-                    </a>
-                </li>
+                <section id="info">
+                    <h2>Sobre mim</h2>
+                    <div class="display">
+                        <div>
+                            <article id="about">
+                        <div id="perfil">
+                            <img src="./assets/img/profile.png" alt="Foto do desenvolvedor, rapaz de barca e cabelo de lado">
+                        </div>
+                    
+                        <h3>Quem é Mateus Tomas Lins?</h3>
+                        <p>Paulista, nascido em Janeiro de 1993, pai de um cágado, um gato, dois jabutis e uma par de plantas.</p>
+                        <p> Enérgico, racional, criativo e metódico, esses foram os ingredientes combinados para criar o garotinho perfeito, mas acidentalmente a web lhe apresentou: O inspecionar de código! E assim nasceu, O estudante de programação.</p>
+                            </article>
+                        </div>
+                        <div id="directs">
+                            <article id="contact">
+                            <ul>
+                                <li class="github">
+                                    <a href="https://github.com/Tommattih" target="_blank">
+                                        <img src="./assets/img/icons/githubWhite.svg" alt="Github, link para acessar minha página no Github">
+                                        <p>Github</p>
+                                    </a>
+                                </li>
+                                
+                                <li class="linkedin">
+                                    <a href="https://www.linkedin.com/in/tommattih/" target="_blank">
+                                        <img src="./assets/img/icons/linkedinWhite.svg" alt="Logo do Linkedin, linl para meu perfil">
+                                        <p>Linkedin</p>
+                                    </a>
+                                </li>
+                                
+                                <li class="whatsapp">
+                                    <a href="https://wa.me/qr/3MJV6HAAJ4DGK1" target="_blank" placeholder="Whatsapp link">
+                                        <img src="./assets/img/icons/whatsappWhite.svg" alt="Whatsapp logo, link para falar comigo pelo Whatsapp">
+                                        Whatsapp
+                                    </a>
+                                </li>
 
-                <li>
-                    <a href="https://wa.me/qr/3MJV6HAAJ4DGK1" target="_blank" placeholder="Whatsapp link">
-                        <img src="./assets/img/zap.svg" alt="Whatsapp logo">
-                        Whatsapp
-                    </a>
-                </li>
-                
-                <li class="github">
-                    <a href="https://github.com/Tommattih" target="_blank">
-                        <img src="./assets/img/github-white-square.svg" alt="Github">
-                        <p>Github</p>
-                    </a>
-                </li>
+                                <li class="mail">
+                                    <a href="mailto:tommattih@gmail.com">
+                                        <img src="./assets/img/icons/gmailWhite.svg" alt="Gmail logo, link para me enviar um email" placeholder="Endereço de email">
+                                        tommattih@gmail.com
+                                    </a>
+                                </li>
+                                <!-- <li id="qrcode">
+                                    <a href="https://wa.me/qr/3MJV6HAAJ4DGK1" target="_blank" class="qr-code">
+                                        <img src="./assets/img/QRcode.svg" alt="Desenho de um QR Code que encaminha para meu Whatsapp">
+                                    </a>
+                                </li> -->
+                            </ul>
+                            </article>
 
-                <li>
-                    <a href="#topo" class="button">
-                        <img src="./assets/img/top.svg" alt="Botão para o topo">
-                        Topo
-                    </a>
-                </li>
-                
+                            <article id="donate">
+                            <a href="https://nubank.com.br/pagar/rgif/NiHVpgBV6e">
+                                <figure>
+                                    <abbr title="Incentive se puder, ter um segundo monitor alavancará meu poder de produção ">
+                                        <img src="./assets/img/qr-pix.png" alt="QR Code Pix para doar qualquer quantia e me ajudar a comprar um monitor secundário">
+                                        <figcaption>Apoie-me</figcaption>
+                                    </abbr>
+                                </figure>
+                            </a>
+                            </article>
+                        </div>
+                    </div>
+                    
+                </section>
             </div>
         </footer>
-        
-    </body>
+    </div>
+</body>
 </html>

@@ -1,0 +1,262 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: var(--text);
+}
+
+/*--------------------*/
+/* * * * PRELOAD * * * */
+.preload{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--background-dark);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: .5s;
+}
+
+.preload-animation{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background-color: var(--main-color);
+  animation: preload .5s infinite ease-in-out;
+}
+
+@keyframes preload {
+  0%{box-shadow: 0 0 1rem .5rem var(--main-color-complement);background-color: var(--main-color);}
+  50%{background-color: var(--main-color);box-shadow: 0 0 1rem 1rem var(--main-color-complement);margin-bottom: 1.5rem;margin-left: .5rem;}
+  75%{box-shadow: 0 0 1rem .5rem var(--main-color);background-color: var(--hover-complement);margin-bottom: 0;margin-right: .7rem;}
+}
+
+
+/*--------------------*/
+/* * * * SHINE PULSE * * * */
+.shine img{
+  animation: shine 2s infinite ease-in-out;
+}
+
+@keyframes shine {
+  0%{filter: brightness(1);}
+  65%{transform: scale(1.01);filter: brightness(1.1);}
+  100%{transform: scale(1);filter: brightness(1);}
+}
+
+
+/*------------------------*/
+/* * * * CARROSEL * * * */
+.carrosel{
+  width: 90vw;
+  height: 70vh;
+  outline: 0.125rem;
+  overflow: hidden;
+  margin: 1rem auto 1rem;
+  box-shadow: 0.4rem 0.4rem 0.6rem rgb(0 0 0 / 20%);
+}
+
+.carrosel ul {
+  display: flex;
+  list-style: none;
+  width: 90vw;
+  height: 70vh;
+  gap: .6rem;
+}
+
+.carrosel li{
+  position: relative;
+  animation: carrosel 20s infinite ease-out;
+}
+
+.carrosel li img{
+  width: 90vw;
+  height: 70vh;
+}
+
+@keyframes carrosel{
+  0%{right: 0vw;}
+  5%{right: 0vw;}
+
+  12%{right: 93vw;}
+  22%{right: 93vw;}
+
+  30%{right: 186vw;}
+  42%{right: 186vw;}
+
+  50%{right: 279vw;}
+  62%{right: 279vw;}
+
+  70%{right: 372vw;}
+  82%{right: 372vw;}
+
+  90%{right: 465vw;}
+  97%{right: 465vw;}
+
+  100%{right: 0vw;}
+}
+
+
+/*--------------------*/
+/* * * * FLIP TURN* * * */
+.flip{    
+  cursor: pointer;
+  height: auto;
+  width: 90vw;
+  margin: 0 auto;
+  position: relative;
+}
+
+.flip .fundo{
+  position: absolute;
+}
+
+.flip .frente{
+  position: relative;
+  animation: flip 3s infinite ease-in-out;
+}
+
+.flip img{
+  width: 90vw;
+}
+
+@keyframes flip{
+  
+  0%{opacity: 1;}
+  40%{opacity: 1;}
+  50%{opacity: 0;}
+
+  80%{opacity: 0;}
+  90%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+/*--------------------*/
+/* * * * FADE * * * */
+.fade img{
+  padding-top: .8rem;
+  background: var(--background-dark);
+  position: absolute;
+}
+
+#fade{
+  animation: fade 2.2s infinite ease-in-out;
+}
+
+.fade{
+  width: 90vw;
+  height: 30vh;
+  overflow: hidden;
+  margin: 0rem auto 1rem;
+  box-shadow: 0.4rem 0.4rem 0.6rem rgb(0 0 0 / 20%);
+  border: solid 0.15rem var(--light-shaddow);
+  border-radius: 0.3rem;
+  position: relative;
+}
+
+.fade a{
+  width: 90vw;
+  height: fit-content;
+}
+
+@keyframes fade{
+  0%{opacity: 0;}
+  29%{opacity: 0;}
+  30%{opacity: 1;}
+  89%{opacity: 1;}
+  90%{opacity: 0;}
+  100%{opacity: 0;}
+}
+
+
+/*--------------------*/
+/* * * * SCROLL * * * */
+.scroll {
+  width: 90vw;
+  height: 35vh;
+  overflow: hidden;
+  margin: 0rem auto 1rem;
+  box-shadow: 0.4rem 0.4rem 0.6rem rgb(0 0 0 / 20%);
+  border: solid 0.15rem var(--light-shaddow);
+  border-radius: 0.3rem;
+}
+
+.scroll a{
+    width: 90vw;
+    height: 35vw;
+}
+
+.scroll a img{
+  height: fit-content;
+  animation: scroll 15s infinite ease-out .5s;
+}
+
+  @keyframes scroll{
+    0%{transform: translateY(0rem)}
+    10%{transform: translateY(0rem)}
+    50%{transform: translateY(-179.5vh)}
+    60%{transform: translateY(-179.5vh)}
+    100%{transform: translateY(0rem)}
+  }
+
+/*--------------------------------------------*/
+/* * * * * * * * * @MEDIA * * * * * * * * * */
+/*-----------------------------------------*/
+@media only screen and (min-width:798px) {
+  
+  /* * * * CARROSEL * * * */
+  .carrosel{
+      width: 23.5rem;
+      height: 31.5rem;
+      outline: .125rem;
+      overflow: hidden;
+      margin: 0rem auto 1rem;
+      box-shadow: .4rem .4rem .6rem rgba(0, 0, 0, .2);
+  }
+
+  .carrosel ul{
+      display: flex;
+      list-style: none;
+      width: 141rem;
+      height: 31.5rem;
+  }
+
+  .carrosel li{
+      position: relative;
+      animation: carrosel 24s infinite ease-out;
+  }
+
+  .carrosel li img{
+      max-width: 23.5rem;
+      max-height: 31.5rem;
+  }
+
+  @keyframes carrosel{
+    0%{right: 0rem;}
+    5%{right: 0rem;}
+
+    12%{right: 23.5rem;}
+    25%{right: 23.5rem;}
+
+    30%{right: 47rem;}
+    45%{right: 47rem;}
+
+    50%{right: 70.5rem;}
+    65%{right: 70.5rem;}
+
+    70%{right: 94rem;}
+    85%{right: 94rem;}
+
+    90%{right: 117.5rem;}
+    98%{right: 117.5rem;}
+
+    100%{right: 0rem;}
+  }
+}
