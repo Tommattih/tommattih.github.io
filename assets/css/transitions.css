@@ -73,7 +73,7 @@
 
 .carrosel li{
   position: relative;
-  animation: carrosel 20s infinite ease-out;
+  animation: carrosel 15s infinite ease-out;
 }
 
 .carrosel li img{
@@ -180,7 +180,7 @@
 /* * * * SCROLL * * * */
 .scroll {
   width: 90vw;
-  height: 35vh;
+  height: 36vh;
   overflow: hidden;
   margin: 0rem auto 1rem;
   box-shadow: 0.4rem 0.4rem 0.6rem rgb(0 0 0 / 20%);
@@ -190,19 +190,19 @@
 
 .scroll a{
     width: 90vw;
-    height: 35vw;
+    height: 36vw;
 }
 
 .scroll a img{
   height: fit-content;
-  animation: scroll 15s infinite ease-out .5s;
+  animation: scroll 12s infinite ease-out .5s;
 }
 
   @keyframes scroll{
     0%{transform: translateY(0rem)}
     10%{transform: translateY(0rem)}
-    50%{transform: translateY(-179.5vh)}
-    60%{transform: translateY(-179.5vh)}
+    50%{transform: translateY(-182.5vh)}
+    60%{transform: translateY(-182.5vh)}
     100%{transform: translateY(0rem)}
   }
 

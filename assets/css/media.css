@@ -184,8 +184,8 @@
   @keyframes scroll{
   0% {transform: translateY(0rem);}
   10% {transform: translateY(0rem);}
-  50% {transform: translateY(-337vh);}
-  60% {transform: translateY(-337vh);}
+  50% {transform: translateY(-340vh);}
+  60% {transform: translateY(-340vh);}
   100% {transform: translateY(0rem);} 
   }
 
