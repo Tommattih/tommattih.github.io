@@ -1,6 +1,6 @@
 # Vitrine de experimentos
 
-### Veja meu portifólio orgânico <br> -> [tommattih.github.io](https://tommattih.github.io/)
+### Veja meu portfólio orgânico <br> -> [tommattih.github.io](https://tommattih.github.io/)
 
 ** ***Updates*** **
 ### Dezembro 2021
