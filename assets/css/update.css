@@ -1,0 +1,335 @@
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+:root{
+    --dark: #270245;
+    --light: #fd5d8d;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+
+	&::selection {
+        background: var(--light);
+		color: darken(--light, 20);
+		color: var(--dark);
+	}
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #181f68;
+    background: no-repeat linear-gradient(-20deg,#060c40 10%, #1C1832 50%, #181f68 85%, #6C3D7A 105%);
+    overflow-x: hidden;
+}
+
+h1 {
+  margin: .5rem .5rem;
+  color: white;;
+}
+
+
+/* designed with https://cssgrid-generator.netlify.app/ */
+.lands {
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+    grid-template-rows: 3fr 2fr 3fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    justify-items: center;
+    align-items: center;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 3 / 2 / 4; }
+.div3 { grid-area: 3 / 3 / 4 / 4; }
+.div4 { grid-area: 3 / 1 / 4 / 2; }
+.div5 { grid-area: 2 / 1 / 3 / 2; }
+.div6 { grid-area: 1 / 2 / 2 / 3; }
+.div7 { grid-area: 2 / 3 / 3 / 4; }
+.div8 { grid-area: 3 / 2 / 4 / 3; }
+.div9 { grid-area: 2 / 2 / 3 / 3; }
+/* designed with https://cssgrid-generator.netlify.app/ */
+
+/* 1) Contêiner principal */
+#worlds {
+  background-color: #000;
+  width: 100%;
+  margin: 2rem auto;
+  padding: .5rem;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* 2) Grade de mapa 3x3 */
+.lands {
+  display: grid;
+  grid-template-columns:
+    minmax(6rem, 3fr)
+    minmax(4rem, 2fr)
+    minmax(6rem, 3fr);
+  grid-template-rows:
+    minmax(6rem, 3fr)
+    minmax(4rem, 2fr)
+    minmax(6rem, 3fr);
+
+  /* espaçamento entre as divs */
+  gap: 0.25rem;
+  
+  margin: 0 auto;
+  width: 80%;
+  aspect-ratio: 1 / 1;   /* mantém a forma quadrada */
+  justify-items: center;
+  align-items: center;
+}
+
+/* 3) Células individuais */
+.lands > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: .25rem;
+  
+  color: #fff;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 5%;
+  box-sizing: border-box;
+
+  /* sombra leve pra separar visualmente */
+  box-shadow: 0 0 .25rem rgba(255,255,255,0.05);
+}
+
+#rpg_me {
+    position: relative;
+    width: 80%;
+    height: 40%;
+    margin: 0 auto;
+    background: #000;
+    overflow: hidden;
+
+  &:before {
+    content: '';
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,.4) 100%);
+    z-index: 500;
+    mix-blend-mode: overlay;
+		pointer-events: none;
+  }
+}
+
+.noise {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
+  z-index: 400;
+  opacity: .8;
+  pointer-events: none;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://ice-creme.de/images/background-noise.png');
+    pointer-events: none;
+  }
+
+  &-moving {
+    opacity: 1;
+    z-index: 450;
+
+    &:before {
+      will-change: background-position;
+      animation: noise 1s infinite alternate;
+    }
+  }
+}
+
+.scanlines {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 2;
+  opacity: .6;
+  will-change: opacity;
+  animation: opacity 3s linear infinite;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .5) 51%);
+    background-size: 100% 4px;
+    will-change: background, background-size;
+    animation: scanlines .2s linear infinite;
+  }
+}
+
+.intro-wrap {
+  user-select: none;
+  position: relative;
+  top: 1%;
+  left: 1%;
+  font-family: 'Press Start 2P', cursive;
+  color: var(white);
+  font-size: 2rem;
+  width: 97%;
+  height: 97%;
+  background: #2b52ff;
+
+  .noise {
+    &:before {
+      background-size: 200%;
+    }
+  }
+
+  .play {
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    font-size: 6vw;
+    will-change: text-shadow;
+    animation: rgbText 2s steps(9) 0s infinite alternate;
+    .char {
+      will-change: opacity;
+      animation: type 1.2s infinite alternate;
+      animation-delay: calc(60ms * var(--char-index));
+    }
+  }
+#tommattih-no-bg {
+    max-width: 75vw;
+    min-width: 40vw;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    filter: invert();
+    opacity: 0.5;
+}
+  .name {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 9vw;
+    white-space: nowrap;
+    will-change: text-shadow;
+    animation: rgbText 1s steps(9) 0s infinite alternate;
+  }
+
+  .enter{
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    white-space: nowrap;
+    transform: translate(-50%, 20%);
+    font-size: 3.5vw;
+    will-change: text-shadow;
+    animation: rgbText 1s steps(9) 0s infinite alternate;
+  }
+  .enter a {
+    color: black;
+    text-decoration: none;
+  }
+  .enter a:hover {
+    font-size: 3.6vw;
+    text-decoration: underline;
+  }
+}
+
+
+
+/* Animations */
+@keyframes noise {
+  0%, 100% {background-position: 0 0;}
+  10% {background-position: -5% -10%;}
+  20% {background-position: -15% 5%;}
+  30% {background-position: 7% -25%;}
+  40% {background-position: 20% 25%;}
+  50% {background-position: -25% 10%;}
+  60% {background-position: 15% 5%;}
+  70% {background-position: 0 15%;}
+  80% {background-position: 25% 35%;}
+  90% {background-position: -10% 10%;}
+}
+
+@keyframes opacity {
+  0% {opacity: .6;}
+  20% {opacity:.3;}
+  35% {opacity:.5;}
+  50% {opacity:.8;}
+  60% {opacity:.4;}
+  80% {opacity:.7;}
+  100% {opacity:.6;}
+}
+
+@keyframes scanlines {
+  from {
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .5) 51%);
+		background-size: 100% 4px;
+  }
+  to {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 50%, transparent 51%);
+		background-size: 100% 4px;
+  }
+}
+
+@keyframes rgbText {
+  0% {
+    text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 1px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+  }
+  25% {
+    text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 1px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+  }
+  45% {
+    text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 -5px 1px rgba(244, 45, 0, 0.8), 5px 0 1px rgba(59, 0, 226, 0.8);
+  }
+  50% {
+    text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), -5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), 5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
+  }
+  55% {
+    text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 3px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+  }
+  90% {
+    text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), -5px 0 1px rgba(251, 0, 231, 0.8), 0 5px 1px rgba(0, 233, 235, 0.8), 5px 0 1px rgba(0, 242, 14, 0.8), 0 -5px 1px rgba(244, 45, 0, 0.8), 5px 0 1px rgba(59, 0, 226, 0.8);
+  }
+  100% {
+    text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
+  }
+}
+
+@keyframes type {
+  0%, 19% {opacity:0;}
+  20%, 100% {opacity:1;}
+}
+
+footer {
+  position: absolute;
+  bottom: 1rem;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+}
