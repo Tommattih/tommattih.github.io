@@ -10,3 +10,19 @@ _(previously planned)_
     * reusable _class_ and _ID_
 * layout for _nav_ interativo
     * 9 diferent situations, spiral-shaped design
+
+---
+
+Release
+* Includes new home structure and documentation for RPG-Me integration. _(Will replace index in a future)_
+
+---
+
+#### 🧩 Navigation update (Portal link)
+- 9th grid in navigation now features a subtle “portal” animation
+- Removed its border and background for better visual balance
+- Added an anchor link to the RPG-Me section (`#rpg_me`)
+- Integrated direct link to the Vercel deployment:
+  - [RPG-Me on Vercel](https://rpg-me-tomadus.vercel.app/)
+
+---
