@@ -26,3 +26,13 @@ Release
   - [RPG-Me on Vercel](https://rpg-me-tomadus.vercel.app/)
 
 ---
+
+#### SET MAP COLORS
+#4b8aa6
+#c75b5b
+#a53013
+#ff9c13
+#dec1b5
+#782f67
+#352389
+#2847d3

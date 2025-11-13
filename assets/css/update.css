@@ -18,6 +18,10 @@
 	}
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 body {
     position: relative;
     height: 100vh;
@@ -56,9 +60,10 @@ h1 {
 .div9 { grid-area: 2 / 2 / 3 / 3; }
 /* designed with https://cssgrid-generator.netlify.app/ */
 
+
 /* 1) Contêiner principal */
 #worlds {
-  background-color: #000;
+  background-color: #05051d;
   width: 100%;
   margin: 2rem auto;
   padding: .5rem;
@@ -107,18 +112,69 @@ h1 {
   box-shadow: 0 0 .25rem rgba(255,255,255,0.05);
 }
 
+/* MERAMENTE ILUSTRATIVO */
+.lands .div6 {background-color: #4b8aa6;}
+.lands .div8 {background-color: #c75b5b;}
+.lands .div4 {background-color: #a53013;}
+.lands .div5 {background-color: #ff9c13;}
+.lands .div1 {background-color: #dec1b5;}
+.lands .div3 {background-color: #782f67;}
+.lands .div7 {background-color: #352389;}
+.lands .div2 {background-color: #2847d3;}
+/* MERAMENTE ILUSTRATIVO */
+
 .lands .div9 {
   border: none;
   background: none;
 }
 
+/* O container principal que segura as sections */
+#scroll-container {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+
+/* Somente define o tamanho e alinhamento básico — sem forçar flex nas internas */
+#scroll-container > section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+}
+
+/* 🔹 Apenas seções simples recebem o centramento */
+#scroll-container > section:not(#rpg_me) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: white;
+}
+
+/* Estilos só pra testar as seções */
+#section1 { background: #4b8aa6; color: black; }
+#section2 { background: #c75b5b; }
+#section3 { background: #ff7b0e; }
+#section4 { background: #ff9c13; color: black; }
+#section5 { background: #ffcc25; color: black; }
+#section6 { background: #782f67; }
+#section7 { background: #352389; }
+#section8 { background: #0c2770; }
+
+/* SECTION #9 RPG-ME DETAILS */
 #rpg_me {
-    position: relative;
+  isolation: isolate;
+  position: relative;
     width: 80%;
     height: 40%;
     margin: 0 auto;
-    background: #000;
+    background: #05051d;
+    /* padding: 1rem 5rem; */
     overflow: hidden;
+    
 
   &:before {
     content: '';
@@ -257,7 +313,7 @@ h1 {
     animation: rgbText 1s steps(9) 0s infinite alternate;
   }
   .enter a {
-    color: black;
+    color: #05051d;
     text-decoration: none;
   }
   .enter a:hover {
@@ -330,14 +386,6 @@ h1 {
 @keyframes type {
   0%, 19% {opacity:0;}
   20%, 100% {opacity:1;}
-}
-
-footer {
-  position: absolute;
-  bottom: 1rem;
-  color: white;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /*  CREANTE WITH: https://cssload.net/en/spinners/2 */
@@ -554,4 +602,13 @@ footer {
   cursor: pointer;
   transform: scale(1.5);
   transition: transform 3s ease-out;
+}
+
+/* o rodapé*/
+footer {
+  position: relative;
+  bottom: 1rem;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
 }
